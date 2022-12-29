@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap');
+
+* 
+{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html
+{
+    height: 100%;
+}
+
+body
+{
+    font-family: 'Roboto', sans-serif;
+    min-height: 100%;
+    background-color: rgb(225, 223, 223);
+}
+
+/*uso el > para indicar que todos los hijos que 
+hereden de la clase tengan estas caracteristicas*/
+.gridWrapper > * 
+{
+    box-shadow: -0.5px -0.5px 5px -0.5px;
+    border-radius: 1px;
+    padding: 1px;
+    text-align: center;
+    color: rgb(141, 75, 85);
+}
+
+.gridWrapper
+{
+    display: grid;
+    gap: 20px;
+    padding: 1%;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: minmax(100px,  auto);
+    grid-row-end: auto;
+}
+
+.myContact
+{
+    background-color: rebeccapurple;
+    grid-column: 1/2;
+    grid-row: 2/3;
+}
+.mySkills
+{
+    background-color: khaki;
+    grid-column: 1/2;
+    grid-row: 3/6;
+}
+.myStudies
+{
+    background-color: green;
+    grid-column: 2/4;
+    grid-row: 1/4;
+}
+
+.hobbies
+{
+    background-color: brown;
+    grid-column: 2/4;
+    grid-row: 4/6;
+}
+
+.imgSelfie
+{
+    width: 100%;
+    height: auto;
+}
+
+.mySelfie
+{
+    background-color: rgb(141, 75, 85);
+    grid-column: 1/2;
+    grid-row-end: auto;
+    position: relative;
+}
+
+.footer
+{
+    background-color: brown;
+    grid-column: 1/4;
+}
+
+.titleText
+{
+    color: white;
+    position:absolute;
+    bottom: 5%;
+    left: 5%;
+}
