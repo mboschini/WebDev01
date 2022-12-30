@@ -16,15 +16,15 @@ body
 {
     font-family: 'Roboto', sans-serif;
     min-height: 100%;
-    background-color: rgb(225, 223, 223);
+    background-color:#f1f1f1;
 }
 
 /*uso el > para indicar que todos los hijos que 
 hereden de la clase tengan estas caracteristicas*/
 .gridWrapper > * 
 {
-    box-shadow: -0.5px -0.5px 5px -0.5px;
-    border-radius: 1px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 0px;
     padding: 1px;
     text-align: center;
     color: rgb(141, 75, 85);
@@ -37,59 +37,112 @@ hereden de la clase tengan estas caracteristicas*/
     padding: 1%;
     grid-template-columns: repeat(3, 1fr);
     grid-auto-rows: minmax(100px,  auto);
-    grid-row-end: auto;
 }
 
-.myContact
+.contact
 {
-    background-color: rebeccapurple;
+    background-color: white;
     grid-column: 1/2;
     grid-row: 2/3;
 }
-.mySkills
+.skills
 {
-    background-color: khaki;
+    background-color: white;
     grid-column: 1/2;
     grid-row: 3/6;
 }
-.myStudies
+.studies
 {
-    background-color: green;
+    background-color: white;
     grid-column: 2/4;
     grid-row: 1/4;
 }
 
 .hobbies
 {
-    background-color: brown;
+    background-color: white;
     grid-column: 2/4;
     grid-row: 4/6;
 }
 
-.imgSelfie
+.avatarImg
 {
-    width: 100%;
+    width: 101%;
     height: auto;
+    display:block;
 }
 
-.mySelfie
+.avatar
 {
-    background-color: rgb(141, 75, 85);
+    background-color: white;
     grid-column: 1/2;
-    grid-row-end: auto;
+    display:flex;
     position: relative;
+    align-items: center;
+    justify-content: center;
+    min-height: 10px;
+    max-height: 400px;
+    overflow: hidden;
 }
+
+.avatarName
+{
+    position: absolute; 
+    bottom: 0; 
+    color: #f1f1f1; 
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    opacity:1;
+    font-size: 28px;
+    padding: 20px;
+}
+
+.avatar:hover .overlay
+{
+    box-shadow: inset 0px 0px 7.5px 0.1px black;
+    opacity:1;
+}
+.overlay
+{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    transition: .2s ease;
+    opacity:0;
+}
+
+/*
+.selfie {
+    position: relative;
+  }
+  
+  .avatarImg {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  
+  .avatarName {
+    position: absolute; 
+    bottom: 0; 
+    background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.5);
+    color: #f1f1f1; 
+    width: 100%;
+    transition: .5s ease;
+    opacity:0;
+    color: white;
+    font-size: 20px;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .selfie:hover .avatarName {
+    opacity: 1;
+  }*/
 
 .footer
 {
-    background-color: brown;
+    background-color: white;
     grid-column: 1/4;
-}
-
-.titleText
-{
-    color: white;
-    position:absolute;
-    bottom: 5%;
-    left: 5%;
 }
