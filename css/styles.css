@@ -56,14 +56,9 @@ a:hover
 
 /*Media Query*/
 
-.gridWrapper {
+.gridWrapper 
+{
     display: grid;
-    gap: 20px;
-    padding: 1%;
-    width: 100%;
-    align-items: stretch;
-    justify-items: stretch;
-
     grid-template-areas:
         "avatar"
         "contact"
@@ -72,12 +67,18 @@ a:hover
         "professionalExperience"
         "educationBackground"
         "hobbies";
-    grid-template-columns:100%;
+    
+    grid-template-columns: 95%;
     grid-template-rows: max-content;
-  }
+    gap: 20px;
+    align-items: center;
+    justify-items: stretch;
+    justify-content: center;
+}
 
 
-  @media all and (min-width: 992px) { 
+@media all and (min-width: 1024px) 
+{ 
     .gridWrapper {
 
         display: grid;
@@ -95,6 +96,9 @@ a:hover
         /*grid-template-rows: 250px 80px auto 1fr 250px;*/
         grid-template-columns: 300px 1fr 1fr;
         grid-template-rows: max-content;
+
+        align-items: stretch;
+        justify-items: stretch;
     }
 
     #temp-text
@@ -113,11 +117,11 @@ a:hover
         visibility: visible;
     }
 
-    * 
+    * li
     {
-        font-size: 16px;
+        font-size: 12px!important;
     }
-  }
+}
 
 /*************/
 

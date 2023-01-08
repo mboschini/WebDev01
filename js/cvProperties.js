@@ -6,7 +6,7 @@ const apiweather =
 
 const weatherText = document.getElementById("temp-text");
 
-async function search()
+async function searchWeatherData()
 {
     try 
     {
@@ -21,4 +21,4 @@ async function search()
     }
 
 }
-search();
+searchWeatherData();
