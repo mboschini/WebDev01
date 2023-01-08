@@ -7,7 +7,7 @@
     margin: 0;
     padding: 0;
     color: rgb(141, 75, 85);
-    font-size:medium;
+    font-size: 14px;
 }
 
 html
@@ -36,6 +36,7 @@ p
 a
 {
     text-decoration: none;
+    overflow: hidden;
 }
 a:hover
 {
@@ -53,24 +54,74 @@ a:hover
     transition: 1s ease;
 }
 
-.gridWrapper
-{
+/*Media Query*/
+
+.gridWrapper {
     display: grid;
     gap: 20px;
     padding: 1%;
     width: 100%;
+    align-items: stretch;
+    justify-items: stretch;
 
     grid-template-areas:
-    "avatar  aboutMe professionalExperience"
-    "avatar  educationBackground professionalExperience"
-    "contact educationBackground professionalExperience"
-    "skills educationBackground professionalExperience"
-    "skills educationBackground hobbies";
+        "avatar"
+        "contact"
+        "skills"
+        "aboutMe"
+        "professionalExperience"
+        "educationBackground"
+        "hobbies";
+    grid-template-columns:100%;
+    grid-template-rows: max-content;
+  }
 
-    grid-template-rows: 250px 80px auto 1fr 250px;
-    grid-template-columns: 300px 1fr 1fr;
 
-}
+  @media all and (min-width: 992px) { 
+    .gridWrapper {
+
+        display: grid;
+        gap: 20px;
+        padding: 1%;
+        width: 100%;
+
+        grid-template-areas:
+        "avatar  aboutMe professionalExperience"
+        "avatar  educationBackground professionalExperience"
+        "contact educationBackground professionalExperience"
+        "skills educationBackground professionalExperience"
+        "skills educationBackground hobbies";
+    
+        /*grid-template-rows: 250px 80px auto 1fr 250px;*/
+        grid-template-columns: 300px 1fr 1fr;
+        grid-template-rows: max-content;
+    }
+
+    #temp-text
+    {
+        display: flex;
+        position: absolute;
+        margin-top: 50px;
+        opacity: 0;
+        visibility: hidden;
+        transition: 0.5s ease;
+    }
+
+    .contactGps:hover #temp-text
+    {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    * 
+    {
+        font-size: 16px;
+    }
+  }
+
+/*************/
+
+
 
 .gridWrapper > .contact
 {
@@ -80,7 +131,7 @@ a:hover
 .gridWrapper > .avatar
 {
     grid-area: avatar;
-    background-color: white;
+    background-color: rgb(141, 75, 85);
 }
 .gridWrapper > .skills
 {
@@ -144,23 +195,41 @@ a:hover
 {
     display: grid;
     grid-template-columns: 50px 1fr;
-    row-gap: 10px;
     margin-left: 10px;
+}
+
+#temp-text
+{
+    display: flex;
+    position: absolute;
+    margin-top: 35px;
+    font-size: smaller;
+    margin-left: 0px;
+    margin-right: 0px;
+    padding-left: 0px;
+}
+
+.contactGps
+{
+    grid-column: 2/3;
+    text-align: left;
+    align-items: center;
+    display: flex;
+}
+
+.gpsIconList
+{
+    width: 40px;
+    height: auto;
+    grid-column: 1/2;
+    margin: 5px;
+    padding: 5px;
 }
 
 .contactWeb
 {
     grid-column: 2/3;
     grid-row: 4/5;
-    text-align: left;
-    align-items: center;
-    display: flex;
-}
-
-.contactGps
-{
-    grid-column: 2/3;
-    grid-row: 3/4;
     text-align: left;
     align-items: center;
     display: flex;
@@ -214,22 +283,12 @@ a:hover
     padding: 5px;
 }
 
-.gpsIconList
-{
-    width: 40px;
-    height: auto;
-    grid-column: 1/2;
-    grid-row: 3/4;
-    margin: 5px;
-    padding: 5px;
-}
-
 .titleContent
 {
     font-weight: bold;
     text-align: left;
-    padding-top: 5%;
-    padding-bottom: 5%;
+    padding-top: 20px;
+    padding-bottom: 20px;
     padding-left: 5%;
     font-size:large;
 }
@@ -261,7 +320,6 @@ a:hover
     padding-bottom: 5px;
     list-style-type: circle;
     list-style-position: inside;
-    list-style-image: none;
 
 }
 
@@ -321,7 +379,7 @@ a:hover
 }
 .professionalExperience li
 {
-    list-style-type: none;
+    list-style-type:disc;
     font-size: small;
     margin-right: 10%;
     padding: 1%;
@@ -375,11 +433,12 @@ a:hover
 /****************************************************/
 .avatarImg
 {
-    width: 101%;
+    width: 300px;
     height: auto;
     display: block;
     top: 0%;
     position: absolute;
+    
 }
 .avatar
 {
