@@ -7,7 +7,6 @@ const apiweather =
 var contactPopup = document.getElementById("contactPopup");
 var bgPanel = document.getElementById("bgPanel");
 var contactButton = document.getElementById("contactButton");
-
 var weatherText = document.getElementById("temp-text");
 
 async function searchWeatherData()
