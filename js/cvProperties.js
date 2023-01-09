@@ -4,7 +4,11 @@ const apiweather =
     url: "https://api.openweathermap.org/data/2.5/weather"
 }
 
-const weatherText = document.getElementById("temp-text");
+var contactPopup = document.getElementById("contactPopup");
+var bgPanel = document.getElementById("bgPanel");
+var contactButton = document.getElementById("contactButton");
+
+var weatherText = document.getElementById("temp-text");
 
 async function searchWeatherData()
 {
@@ -22,3 +26,18 @@ async function searchWeatherData()
 
 }
 searchWeatherData();
+
+function openContactPopUp()
+{
+    contactPopup.style.transform=("translate(-50%,-50%) scale(1)");
+    contactPopup.style.visibility = "visible";
+    bgPanel.style.visibility = "visible";
+
+}
+
+function closeContactPopUp()
+{
+    contactPopup.style.transform=("translate(-50%,-50%) scale(0.1)");
+    contactPopup.style.visibility = "hidden";
+    bgPanel.style.visibility = "hidden";
+}

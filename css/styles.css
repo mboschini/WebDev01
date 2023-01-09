@@ -206,11 +206,73 @@ a:hover
 {
     display: flex;
     position: absolute;
-    margin-top: 35px;
     font-size: smaller;
+    margin-top: 35px;
     margin-left: 0px;
     margin-right: 0px;
     padding-left: 0px;
+}
+
+#contactButton
+{
+    width: fit-content;
+    border-width: 0px;
+    border-radius: 30px;
+    padding-top: 0px;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    cursor: pointer;
+    outline: none;
+}
+
+#contactPopup
+{
+    background-color: #fff;
+    position: absolute;
+    width: 400px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(0.1); /*scale(0.1)*/
+    border: 2px;
+    border-radius: 10px;
+    border-style: solid;
+    border-color:rbg(141, 75, 85);
+    z-index: 1;
+    visibility: hidden;
+    transition: ease 0.2s;
+}
+
+#contactPopup a
+{
+    justify-content: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+#contactPopup button
+{
+    margin-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+#contactPopup h2
+{
+    margin-top: 10px;
+}
+
+#bgPanel{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    visibility: hidden;
 }
 
 .contactGps

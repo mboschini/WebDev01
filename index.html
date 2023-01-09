@@ -22,7 +22,14 @@
             <div class="line-1"></div>
             <div class = "contactGridWrapper">
                 <img src="Images\mail.png" alt="MailIcon" class="mailIconList"/>                
-                <a href="mailto:boschini.mariano@gmail.com" class="contactMail">boschini.mariano@gmail.com</a> 
+                <button type="submit" id="contactButton" onclick="openContactPopUp()">Contact</button>
+                
+                <div id="bgPanel" onclick="closeContactPopUp()"></div>
+                <div id="contactPopup">
+                    <h2>Email</h2>
+                    <a href="mailto:boschini.mariano@gmail.com" class="contactMail">boschini.mariano@gmail.com</a>
+                    <button type="button" onclick="closeContactPopUp()">Close</button>    
+                </div>
                 <img src="Images\cel.png" alt="CelIcon" class="celIconList"/>
                 <a href="https://wa.me/5491162210586" class="contactCel">+54 9 11 62210586</a>
                 <img src="Images\gps.png" alt="GpsIcon" class="gpsIconList"/>
@@ -139,13 +146,9 @@
             </ul>
         </footer>
     </div>
-    <!--    
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/aR-KAldshAE" 
-    title="YouTube video player" frameborder="0" 
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
-        not supported
-    </iframe>
-    -->
+    
+
+
 </body>
 
 </html>
